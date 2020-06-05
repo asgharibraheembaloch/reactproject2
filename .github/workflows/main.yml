@@ -35,6 +35,6 @@ jobs:
     # installing surge      
     - name: installing surge
       run: npm install -g surge
-    # deloying app with surge actions
+    # deloying app with surge
     - name: deploying on surge
       run: surge ./build http://react.session.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
