@@ -24,11 +24,6 @@ jobs:
       uses: actions/setup-node@v2-beta
       with:
         version: 12
-    # setup yarn for git
-
-    # creating build      
-    - name: creating build
-      run: yarn build
     # installing surge      
     - name: installing surge
       run: npm install -g surge
