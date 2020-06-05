@@ -25,10 +25,15 @@ jobs:
       with:
         version: 12
     # setup yarn for git
-    - name: github action for yarn
-      uses: borales/actions-yarn@v2.1.0
-      with:
-        cmd: install
+    - name: GitHub Action for Yarn
+      uses: Borales/actions-yarn@v2.3.0
+        with:
+          # Yarn command
+          cmd: 
+          # NPM_AUTH_TOKEN
+          auth-token: # optional
+          # NPM_REGISTRY_URL
+          registry-url: # optional
     # creating build      
     - name: creating build
       run: yarn build
