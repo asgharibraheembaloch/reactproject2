@@ -25,11 +25,7 @@ jobs:
       with:
         version: 12
     # setup yarn for git
-    - name: GitHub Action for Yarn
-      uses: Borales/actions-yarn@v2.1.0
-      with:
-        # Yarn command
-        cmd: 
+
     # creating build      
     - name: creating build
       run: yarn build
