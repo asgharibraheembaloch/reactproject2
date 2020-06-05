@@ -25,13 +25,13 @@ jobs:
       with:
         version: 12
     # setup yarn for git
-    -name: github action for yarn
-     uses: borales/actions-yarn@v1.22.4
-     with:
-      cmd: install
+    - name: github action for yarn
+      uses: borales/actions-yarn@v2.1.0
+      with:
+        cmd: install
     # creating build      
-    -name: creating build
-     run: yarn build
+    - name: creating build
+      run: yarn build
     # installing surge      
     - name: installing surge
       run: npm install -g surge
