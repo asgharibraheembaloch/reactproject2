@@ -11,13 +11,9 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   test:
-    name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        node_version: ['8', '10', '12']
-        os: [ubuntu-latest, windows-latest]
-
+    name: Test on node 
+    runs-on: windows-latest
+    node_version: 12
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node_version }}
