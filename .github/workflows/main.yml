@@ -13,13 +13,12 @@ jobs:
   test:
     name: Test on node 
     runs-on: windows-latest
-    node_version: 12
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node_version }}
+    - name: Use Node.js 
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node_version }}
+        node-version: 12
 
     - name: npm install, build and test
       run:
